@@ -1,0 +1,7 @@
+*.o
+*.dll
+*.tlb
+*_i.c
+*_p.c
+I*.h
+dlldata.c

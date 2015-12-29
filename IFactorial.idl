@@ -1,0 +1,20 @@
+import "unknwn.idl";
+
+[
+    object,
+    uuid(4aa9b046-3cfa-408f-840d-43ff08c182d6),
+    helpstring("IFactorial implements, er, factorials.")
+]
+interface IFactorial : IUnknown {
+    HRESULT Factorial16(short n, [out, retval] short *result);
+    HRESULT Factorial32(int n, [out, retval] int *result);
+};
+
+[
+    uuid(9b390bb5-1c85-4b8d-af99-f0a6a28223d6),
+    helpstring("LibFactorial is an object-oriented POS.")
+]
+library LibFactorial {
+    importlib("stdole32.tlb");
+    interface IFactorial;
+};
